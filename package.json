@@ -1,0 +1,22 @@
+{
+  "name": "node-cms",
+  "version": "1.0.0",
+  "description": "Content Management System in nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyious/node-cms.git"
+  },
+  "author": "Alexandra Knopf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xyious/node-cms/issues"
+  },
+  "homepage": "https://github.com/xyious/node-cms#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
