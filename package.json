@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xyious/node-cms#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "htmlparser2": "^7.1.2"
   }
 }

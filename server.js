@@ -1,10 +1,12 @@
 const express = require('express');
 
+const renderPage = require('./renderPage.js')
+
 const app = express();
 const port = process.env.PORT || 7777;
 
 app.get('/', function(request, response) {
- response.send('Hello, World!');
+ renderPage.renderPage(request, response);
 });
 
 app.listen(port, function() {
