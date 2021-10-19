@@ -1,19 +1,23 @@
 const fs = require('fs');
-const htmlparser2 = require("htmlparser2");
+const parse = require('node-html-parser').parse;
 
 function renderPage(request, response) {
-    fs.readFile('index.html', 'utf8', (err,html)=>{
+    fs.readFile('./template.html', 'utf8', (err,html)=>{
         if(err){
            throw err;
         }
      
-        const root = htmlparser2.parseDocument(html);
+        const root = parse(html);
      
         const head = root.querySelector('head');
-        head.appendChild('<title>Stuff here</title>');
+        let node = parse('<title>Stuff here</title>')
+        head.appendChild(node);
         const body = root.querySelector('body');
-        body.appendChild('<div id="content">Hello World !</div>');
+        node = parse('<div id="content">Hello World !</div>')
+        body.appendChild(node);
      
-        response.send(root);
+        response.send(root.toString());
       });
 }
+
+module.exports = renderPage;
