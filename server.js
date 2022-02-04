@@ -23,6 +23,8 @@ app.get('/', function(request, response) {
     renderPage(request, response);
 });
 
+app.use(express.static('public'));
+
 app.listen(port, function() {
     console.log('Server listening on http://localhost:' + port);
 });
